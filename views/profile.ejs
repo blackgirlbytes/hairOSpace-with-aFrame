@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>HairOspace</title>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1></i> HairOSpace Results!</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+
+            <div class="row">
+
+                <!-- LOCAL INFORMATION -->
+                <div  id="area">
+                    <div class="welcome" id="welcome">
+                        <h3><span class="fa fa-user"></span> Welcome, Queen  <%= user.local.email %> to the hair forum!</h3>
+                        <h4>Share your results!</h4>
+                        <button type="button" name="button"><a href="/cert">Get Your AR avatar</a></button>    
+                        <% if (user.local.email) { %>
+
+                            <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                        <% } else { %>
+                            <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                        <% } %>
+
+                    </div>
+
+                <div class="col-sm-6">
+
+                  <ul id="messsageList"class="messages">
+                  <% for(var i=0; i<messages.length; i++) {%>
+                    <li class="message">
+                      <span><%= messages[i].hairType %></span>
+                      <span><%= messages[i].hairPorosity %></span>
+                      <span><%= messages[i].name %></span>
+                      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+                    </li>
+                  <% } %>
+                  </ul>
+                </div>
+
+                  <h2 id=formHead>Add a new item</h2>
+                  <% if (user.local.email) { %>
+                  <form action="/messages" method="POST">
+                    <input type="text" placeholder="type" name="hairType"  list="porosityList">
+                    <input type="text" placeholder="porosity" name="hairPorosity" list="typeList">
+                    <input type="text" name="name" value="" placeholder="yourName">
+                      <button type="submit">Submit</button>
+                    <datalist id="porosityList">
+                      <opton value="low">
+                      <option value="normal">
+                      <option value="high">
+
+                    <datalist id="typeList">
+                      <opton value="1a">
+                      <option value="1b">
+                      <option value="1c">
+                      <opton value="2a">
+                      <option value="2b">
+                      <option value="2c">
+                      <opton value="3a">
+                      <option value="3b">
+                      <option value="3c">
+                      <opton value="4a">
+                      <option value="4b">
+                      <option value="4c">
+                    </datalist>
+
+                  </form>
+                  </div>
+                  <% } %>
+
+    </div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

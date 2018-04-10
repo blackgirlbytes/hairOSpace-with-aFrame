@@ -1,0 +1,255 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color:black;
+     font-size: 18px;
+     line-height: 1.4;
+     font-family: 'Amatic SC', cursive;
+     background: white;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  background:rgba(198,172,225,0.4);
+  height: 800px;
+  width: 95%;
+  margin-top: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  box-shadow: 5px 5px 2px 2px gray;
+}
+h2{
+
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
+}
+h2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.firstQ{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40%;
+  border: none;
+  background:#6A4FEF;
+  height:60px;
+  width:20%;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.secQ{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40%;
+  border: none;
+  background:#6A4FEF;
+  height:80px;
+  width:20%;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.thirdQ{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40%;
+  border: none;
+  background:#6A4FEF;
+  height:80px;
+  width:20%;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a29bfe;
+    border-radius: 5px;
+}
+
+ul img{
+  width:auto;
+  height:66px;
+  filter: invert(100%);
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1,h3{
+  text-align: center;
+
+  font-family: 'Cabin Sketch', cursive;
+}
+
+h1{
+  color:#4b7bec;
+  padding-top: 60px;
+  font-size: 3em;
+
+}
+h3{
+  font-size: 2em;
+}
+.hideQ{
+  display: none;
+}
+.showQ{
+  display: block;
+}
+
+#startQuiz{
+  border: 0;
+  background: #6A4FEF;
+  box-shadow: none;
+  border-radius: 8px;
+  color:white;
+  width: 20%;
+  height:60px;
+  font-size:1.5em;
+  margin-left: 30%;
+}
+button:hover{
+  background: #ac88d0;
+}
+#startQuiz:hover{
+  background: #ac88d0;
+}
+
+#submitBtn, #learnMoreBtn{
+  margin-left: 44%;
+  border:0;
+  background:#6A4FEF;
+  width: 15%;
+  height:50px;
+  font-family: 'Amatic SC', cursive;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+}
+.hairPics{
+  height:250px;
+  width: 250px;
+}
+.hairPics:first-of-type{
+  margin-left: 8%;
+}
+
+#resultPic{
+  height:250px;
+  width: 250px;
+  margin-left: 40%;
+}
+
+.increaseFont:first-of-type{
+  margin-left:36%;
+}
+.increaseFont{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-top:-4px;
+}
+#hairInfo{
+  text-align: center;
+  font-weight:bold;
+  font-size: 1.5em;
+}
+#porosityInfo{
+  text-align: center;
+  font-size: 1.1em;
+}

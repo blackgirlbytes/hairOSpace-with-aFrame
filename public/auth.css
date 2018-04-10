@@ -1,0 +1,87 @@
+body{
+  background-image: url(twonaturals.jpg);
+  background-size:cover;
+  color:white;
+  padding-top:80px;
+  text-shadow: .5px .5px black;
+  word-wrap:break-word;
+
+}
+button{
+  background: #26C281;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:none;
+  color:white;
+  height: 40px;
+  width: 35%;
+
+}
+input{
+  height:40px;
+}
+img{
+  height: 200px;
+}
+
+form, #formHead{
+  text-align: center;
+}
+
+.btn-lg{
+  background: purple;
+  border:white;
+}
+
+.jumbotron, .text-center, .col-sm-offset-3{
+  background:rgba(204, 204, 204, 0.5);
+  height: 500px;
+}
+.messages{
+  background:#e74c3c;
+  box-shadow: 3px 3px gray;
+  height: 260px;
+  list-style: none;
+}
+.redirectLink{
+  color:purple;
+  font-weight: bold;
+}
+
+
+
+
+#area{
+    margin-left: 10%;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#messsageList{
+  background: #F36843;
+  height:150px;
+  margin-left: 20%;
+  margin-top:20px;
+  width: 50%;
+}
+
+
+
+#payMsg{
+  background: black;
+  color: green;
+  padding-bottom: 30px;
+}
+#machine{
+  float: left;
+  width:80%;
+}
+
+#submitOnProfile{
+  width: 20%;
+}
+#title{
+  color: black;
+  margin-top: -30px;
+}
