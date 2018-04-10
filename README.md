@@ -23,3 +23,10 @@ If more time was available to me, I would create a chat room, I would have objec
 
 ## Lessons Learned 
 I learned about the wonders of a-frame! I know I only touched the surface, but I can't wait to delve into it more
+
+## Installation
+Clone repo
+run npm install
+## Usage
+run node server.js
+Navigate to localhost:8080
