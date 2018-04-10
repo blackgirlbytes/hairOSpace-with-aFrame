@@ -28,5 +28,5 @@ I learned about the wonders of a-frame! I know I only touched the surface, but I
 Clone repo
 run npm install
 ## Usage
-run node server.js
+run npm start
 Navigate to localhost:8080
