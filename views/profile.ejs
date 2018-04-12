@@ -3,55 +3,61 @@
 <head>
     <title>HairOspace</title>
     <link rel="stylesheet" href="font-awesome.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
+  <header>
+    <ul class="nav">
+      <li><img src="science.png" alt=""></li>
+  <li><a href="/">HairOspace</a></li>
+
+  </ul>
+  </header>
 
     <div class="page-header text-center">
-        <h1></i> HairOSpace Results!</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+
+
 
             <div class="row">
 
                 <!-- LOCAL INFORMATION -->
                 <div  id="area">
-                    <div class="welcome" id="welcome">
-                        <h3><span class="fa fa-user"></span> Welcome, Queen  <%= user.local.email %> to the hair forum!</h3>
-                        <h4>Share your results!</h4>
-                        <button type="button" name="button"><a href="/cert">Get Your AR avatar</a></button>    
-                        <% if (user.local.email) { %>
+                  <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+                        <h1><span class="fa fa-user"></span> Welcome, Queen  <%= user.local.email %> to the hair forum!</h1>
+
+                        <button id="avi" type="button" name="button"><a href="/cert">Get Your AR avatar</a></button>
+                        <!-- <% if (user.local.email) { %>
 
                             <a href="/unlink/local" class="btn btn-default">Unlink</a>
                         <% } else { %>
                             <a href="/connect/local" class="btn btn-default">Connect Local</a>
-                        <% } %>
+                        <% } %> -->
 
-                    </div>
+
 
                 <div class="col-sm-6">
 
-                  <ul id="messsageList"class="messages">
+                  <ul class="messages">
                   <% for(var i=0; i<messages.length; i++) {%>
                     <li class="message">
                       <span><%= messages[i].hairType %></span>
                       <span><%= messages[i].hairPorosity %></span>
                       <span><%= messages[i].name %></span>
-                      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+
                     </li>
                   <% } %>
                   </ul>
-                </div>
-
-                  <h2 id=formHead>Add a new item</h2>
                   <% if (user.local.email) { %>
                   <form action="/messages" method="POST">
+                    <input type="text" name="name" value="" placeholder="Your Name">
                     <input type="text" placeholder="type" name="hairType"  list="porosityList">
                     <input type="text" placeholder="porosity" name="hairPorosity" list="typeList">
-                    <input type="text" name="name" value="" placeholder="yourName">
-                      <button type="submit">Submit</button>
+
+                      <button id=subBtn type="submit">Submit</button>
+
                     <datalist id="porosityList">
                       <opton value="low">
                       <option value="normal">
@@ -77,6 +83,11 @@
                   <% } %>
 
     </div>
+                </div>
+
+
+
+
 
 <script src="main.js"></script>
 
