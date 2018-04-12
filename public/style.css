@@ -1,88 +1,148 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+#container {
+	width: 100%;
+	margin: auto;
+  height: auto;
+}
+
 body{
-  background-image: url(twonaturals.jpg);
+  background: white;
   background-size:cover;
   color:white;
-  padding-top:80px;
+  font-family: 'Amatic SC', cursive;
+  padding-top: 10px;
   text-shadow: .5px .5px black;
   word-wrap:break-word;
 
 }
-button{
-  background: #26C281;
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a29bfe;
+    border-radius: 5px;
+}
+.nav img{
+  width:auto;
+  height:66px;
+  filter: invert(100%);
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#subBtn{
+  background: #0E87FE;
   border: 0;
   border-radius: 5px;
   box-shadow:none;
   color:white;
-  height: 40px;
-  width: 15%;
+  height: 20px;
+  width: 20%;
+  margin-left: 27%;
 
+  font-size: .6em;
+}
+input:first-of-type{
+  margin-top: 360px;
 }
 input{
-  height:30px;
+  margin-left: 10%;
+  height:20px;
   display: flex;
+  width: 40%;
   flex-direction: column;
-  
-}
-img{
-  height: 200px;
+
 }
 
 form, #formHead{
   text-align: center;
 }
 
-.btn-lg{
-  background: red;
-  border:white;
-}
-.complete{
-    color: green;
 
-}
 .jumbotron, .text-center, .col-sm-offset-3{
-  background:rgba(204, 204, 204, 0.5);
+  background:rgba(198,172,225,0.4);
   height: 550px;
+  width: 95%;
+  margin-top: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  box-shadow: 5px 5px 2px 2px gray;
 }
-.messages{
-  background:#B072FF;
-  box-shadow: 3px 3px gray;
-  height: 260px;
-  list-style: none;
-}
+
 .redirectLink{
   color:red;
   font-weight: bold;
 }
 
-.welcome{
-  background: #6A3600;
-  border: 1px solid white;
-  border-radius: 5px;
-  color:white;
 
-}
 
-#makeBlack{
-  color:black;
-}
-#makeGreen{
-  color: black;
-}
-#qTitle{
-  background: #B072FF;
-  border: 1px solid white;
-  border-radius: 5px;
-  margin-top: -2px;
-}
+
 #welcome{
   background: #A35691;
 
 }
 
 #area{
-    margin-left: 10%;
-    margin-top: 10px;
+    margin-left: 2%;
     width: 80%;
+    height: auto;
 
 }
 
@@ -94,27 +154,58 @@ form, #formHead{
   width: 70%;
 }
 
-#buttonPad{
-  background: rgba(0, 0, 0, 0.6);
-  float: left;
-  height: 275px;
-  width: 20%;
-}
 
-#payMsg{
-  background: black;
-  color: green;
-  padding-bottom: 30px;
-}
-#machine{
-  float: left;
-  width:80%;
-}
 
 #submitOnProfile{
   width: 20%;
 }
-#title{
-  color: black;
-  margin-top: -30px;
+
+h1{
+  color: #4B7BEC;
+  font-size: 1.8em;
+  margin-left: 25%;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.message{
+ border: 2px solid #dedede;
+ background-color: #f1f1f1;
+ border-radius: 5px;
+ padding: 10px;
+ margin:1px;
+ color:black;
+ list-style:none;
+ width:45%;
+ font-size: .7em;
+ font-family: Arial, Helvetica, sans-serif
+}
+.message:nth-child(even){
+  color:white;
+  margin-left: 35%;
+  background: #0E87FE;
+}
+
+.col-sm-6{
+  border: 8px groove #6A4FEF;
+  background: 	rgba(192,192,192, 0.5);
+  height: 460px;
+  width:30%;
+  margin-left: 45%;
+  border-radius: 10px;
+}
+#avi{
+  background: #0E87FE;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:none;
+  color:white;
+  height: 40px;
+  width: auto;
+  margin-left: 53%;
+  font-size: .6em;
+}
+#avi a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
 }
